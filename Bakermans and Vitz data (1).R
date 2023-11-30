@@ -11,3 +11,9 @@ space <- SpatialPoints(coords = data.frame("x" = ewpw$Longitude, "y" = ewpw$Lati
 
 crs(space) <- CRS("+init=epsg:4326")
 plot(space, axes = TRUE, xlab = "Longtitude", ylab = "Latitude", main = "Migration and Overwintering Locations", pch = 3)
+
+
+set.seed(123)
+df1 <- data.frame("x" = seq(from = 1, to = 100), "y" = rnorm(n = 100, mean = 50, sd = 10))
+plot(x = df1$x, y = df1$y)
+hist(df1$y)
